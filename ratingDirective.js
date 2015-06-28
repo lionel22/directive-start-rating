@@ -41,13 +41,13 @@ app.directive('hmrating',function(){
             }
 
             function ratingEffect(r){
-                for(i=0;i<=r;i++)
+                for(var i=0;i<=r;i++)
                     angular.element(document.querySelector("#"+$scope.hmid+i)).removeClass("fa-star-o"); 
 
-                for(i=0;i<=r;i++)
+                for(var i=0;i<=r;i++)
                     angular.element(document.querySelector("#"+$scope.hmid+i)).addClass("fa-star"); 
 
-                for(i=r+1;i<=$scope.hmupto;i++){
+                for(var i=r+1;i<=$scope.hmupto;i++){
                     angular.element(document.querySelector("#"+$scope.hmid+i)).removeClass("fa-star"); 
                     angular.element(document.querySelector("#"+$scope.hmid+i)).addClass("fa-star-o"); 
                 }
