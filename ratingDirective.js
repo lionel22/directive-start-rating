@@ -13,7 +13,7 @@ angular.module( 'hmrating.directives', [])
             mouseover : '&',
             mouseleave : '&'
         },
-        templateUrl: '/views/admin/blocs/rating.html',
+        templateUrl: 'rating.html',
         link : function(scope,element,attr){
             scope.setrating(scope.rate | 0);
         },
