@@ -1,6 +1,13 @@
-angular.module( 'hmrating.directives', [])
+app.filter('range', function() {
+  return function(input, total) {
+    total = parseInt(total);
+    for (var i=1; i<=total; i++)
+      input.push(i);
+    return input;
+  };    
+})
 
-.directive('hmrating',function(){
+app.directive('hmrating',function(){
     return {
         restrict: 'EA',
         scope: {
